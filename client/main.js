@@ -100,14 +100,13 @@ const deleteItem = (event) => {
 };
 
 //edit
-const editItem = (e) => {
-  e.preventDefault();
+const editItem = (event) => {
+  event.preventDefault();
 
   let bodyObj = {
     item: editInput.value,
   };
-  axios
-    .put(`${baseURL}/api/editRoleModel/${editIndex.value}`, bodyObj)
+  axios.put(`${baseURL}/api/editRoleModel/${editIndex.value}`, bodyObj)
     .then((res) => {
       const roleModels = res.data;
       roleModelStack.innerHTML = "";
@@ -117,8 +116,8 @@ const editItem = (e) => {
         newRoleModel.textContent = roleModels[i];
         roleModelStack.appendChild(newRoleModel);
       }
-      editIndex.value = "";
-      editInput.value = "";
+      editIndex.value = ""
+      editInput.value = ""
     });
 };
 

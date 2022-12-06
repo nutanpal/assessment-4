@@ -66,7 +66,7 @@ module.exports = {
 
   editRoleModel: (req, res) => {
     let index = req.params.id;
-    let { item } = req.body;
+    let {item} = req.body;
     roleModels.splice(index, 1, item);
     res.status(200).send(roleModels);
   },

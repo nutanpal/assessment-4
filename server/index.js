@@ -21,6 +21,6 @@ app.get("/api/fortune", getFortune);
 app.get("/api/roleModels", getRoleModels);
 app.post("/api/addRoleModel", addRoleModel);
 app.delete("/api/deleteRoleModel/:id", deleteRoleModel);
-app.put("/api/editRoleModel", editRoleModel);
+app.put('/api/editRoleModel/:id', editRoleModel); // missed id : bug
 
 app.listen(4000, () => console.log("Server running on 4000"));
